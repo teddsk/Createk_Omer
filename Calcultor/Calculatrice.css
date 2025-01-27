@@ -1,0 +1,32 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: #fdfffc;
+    text-align: center;
+    background-image: url(816dfd710806e20aa40a7cd8c76d2e2d.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+h1{
+    font-size: 50px;
+}
+
+input{
+    width: 76px;
+    height: 51px;
+    font-size: 46px;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: white;
+    color: black;
+    border-style: none;
+}
+.btn:hover{
+    background-color: yellow;
+    cursor: pointer;
+}
+
