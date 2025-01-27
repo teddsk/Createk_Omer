@@ -1,4 +1,4 @@
-# Createk - README
+# Createk_Omer - README
 
 Bienvenue dans le dépôt GitHub **Createk** ! Ce projet contient deux applications interactives et ludiques : une **calculatrice web** et un jeu appelé **Chi Fou Mi** (pierre-papier-ciseaux). Voici un guide détaillé pour que tu puisses explorer, comprendre et tester chaque projet, même si tu es nouveau en informatique.
 
@@ -20,6 +20,10 @@ Cela téléchargera tous les fichiers du projet sur ton ordinateur.
 ### Description
 La calculatrice web est une application simple et élégante qui te permet de faire des calculs mathématiques directement dans ton navigateur. Elle est facile à utiliser et a été conçue pour être intuitive.
 
+### Stack utilisée
+- **HTML** : pour structurer la page web.
+- **CSS** : pour le style et la mise en page.
+
 ### Fonctionnalités principales :
 - Effectuer des opérations mathématiques de base : addition, soustraction, multiplication et division.
 - Effacer les entrées avec un bouton "C".
@@ -31,12 +35,12 @@ La calculatrice web est une application simple et élégante qui te permet de fa
    cd Createk_Omer/Calcultor
    ```
 2. Ouvre le fichier **Calculatrice.html** dans un navigateur (par exemple, Google Chrome ou Firefox) :
-   - Sous Linux :
+   - Sous Linux : 
      ```bash
      xdg-open Calculatrice.html
      ```
    - Sous Windows : double-clique sur le fichier `Calculatrice.html`.
-   - Sous macOS :
+   - Sous macOS : 
      ```bash
      open Calculatrice.html
      ```
@@ -55,6 +59,11 @@ La calculatrice web est une application simple et élégante qui te permet de fa
 
 ### Description
 **Chi Fou Mi** est un jeu web où tu peux jouer au célèbre jeu pierre-papier-ciseaux. Cette version inclut un système de connexion pour enregistrer les joueurs.
+
+### Stack utilisée
+- **Django** : framework backend pour gérer la logique et les utilisateurs.
+- **Templates Django (HTML, CSS)** : pour créer les pages web interactives.
+- **SQLite3** : base de données pour enregistrer les comptes des utilisateurs.
 
 ### Fonctionnalités principales :
 - S'inscrire et se connecter.
