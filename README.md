@@ -108,8 +108,9 @@ Avant de commencer, tu dois installer Python et les dépendances nécessaires.
 - Si tu rencontres des problèmes techniques, vérifie que toutes les dépendances sont bien installées.
 - Le jeu "Chi Fou Mi" utilise une base de données SQLite pour gérer les comptes des utilisateurs.
 
+---
 
-Contact
+## Contact
 
 Si tu as des questions, des suggestions ou des problèmes, tu peux contacter les membres du projet :
 
