@@ -1,0 +1,117 @@
+body {
+    background-color: rgb(222, 149, 76);
+    text-align: center;
+}
+
+.sign,
+.login {
+    margin-top: 20px;
+}
+
+.login_form{
+    border: 2px solid white;
+    border-radius: 30px;
+    width: 20%;
+    padding-bottom: 20px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: aquamarine;
+}
+
+.create_compte {
+    color: blue;
+}
+
+h1 {
+    text-shadow: 10px 10px 20px blue;
+}
+
+section {
+    align-items: center;
+}
+
+.error {
+    color: red;
+}
+
+.invisible-label {
+    display: none;
+}
+
+.jouer {
+    margin-top: 30px;
+    margin-left: 160px;
+}
+
+.win {
+    color: green;
+}
+
+.lose {
+    color: red;
+}
+
+.mains {
+   width: 70px;
+   height: 70px;
+   margin-left: 20px;
+   margin-right: 50px;
+}
+
+.mains:hover {
+    border: 5px solid;
+    border-color: rgb(19, 20, 20);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+.choix {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+table {
+    margin: auto;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    position: center;
+}
+
+td, th{
+    padding: 15px;
+    border: 1px solid;
+}
+
+td {
+    padding: 15px;
+}
+
+.init {
+    margin: auto;
+    margin-top: 70px;
+    display: inline;
+    border: 1px solid white;
+    border-radius: 30px;
+    background: white;
+}
+
+@media screen and (max-width: 996px) {
+
+    .login_form{
+        width: 50%;
+    }
+
+    .choix {
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,24 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+<section class="login_form">
+    <h1>Connectez-vous</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Votre email:</p>
+        <div>{{form.email}}</div>
+        <p>Votre mot de passe:</p>
+        <div>{{form.password}}</div>
+        <input type="submit" value="Se connecter" class="login">
+    </form>
+    {% if error_message %}
+        <div class="error">
+            {{ error_message }}
+        </div>
+    {% endif %}
+    <div>
+        <p>Vous n'avez pas de compte ?</p> 
+        <a href="{% url 'sign' %}" class="create_compte">Créer un compte</a>
+    </div>
+</section>
+{% endblock %}

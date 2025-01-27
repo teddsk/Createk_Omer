@@ -1,0 +1,96 @@
+{% extends 'listings/base.html' %}
+{% load static%}
+{% block content %}
+
+    <h1>Bienvenue {{prenom}}</h1>
+    <h3>Information:</h3>
+    <p>La pierre gagne contre le ciseau et perd contre la feuille</p>
+    <p>La feuille gagne contre la pierre et perd contre le ciseau</p>
+    <p>Le ciseau gagne contre la feuille et perd contre la pierre</p>
+    <p>Vous avez dix matchs au total</p>
+    <h3>Faites votre choix:</h3>
+        {% if nb_game >= 10 %}
+            <img src="{% static 'images/pierre.png' %}" class="mains">
+            <img src="{% static 'images/feuille.png' %}" class="mains">
+            <img src="{% static 'images/ciseau.png' %}" class="mains">
+            <br>
+            <p class="error"><strong>Réinitialisez les scores pour rejouer</strong></p>
+        {% else %}
+            <a href="{% url 'my_choices' choix='pierre' %}?prenom={{prenom}}">
+                <img src="{% static 'images/pierre.png' %}" alt="Pierre" class="mains">
+            </a>
+            <a href="{% url 'my_choices' choix='feuille' %}?prenom={{prenom}}">
+                <img src="{% static 'images/feuille.png' %}" alt="Feuille" class="mains">
+            </a>
+            <a href="{% url 'my_choices' choix='ciseau' %}?prenom={{prenom}}">
+                <img src="{% static 'images/ciseau.png' %}" alt="Ciseau" class="mains">
+            </a>
+        {%endif%}
+    <div class="choix">
+            {% if my_choice == 'pierre' %}
+                <p>Vous avez choisi :</p> 
+                <img src="{% static 'images/pierre.png' %}">
+            {% elif my_choice == 'feuille' %}
+            <p>Vous avez choisi :</p> 
+                <img src="{% static 'images/feuille.png' %}">
+            {% elif my_choice == 'ciseau' %}
+            <p>Vous avez choisi :</p> 
+                <img src="{% static 'images/ciseau.png' %}">
+            {%endif%}
+            {% if cp_choice == 'pierre' %}
+                <p>Le CPU a choisi : </p>
+                <img src="{% static 'images/pierre.png' %}">
+            {% elif cp_choice == 'feuille' %}
+                <p>Le CPU a choisi : </p>
+                <img src="{% static 'images/feuille.png' %}">
+            {% elif cp_choice == 'ciseau' %}
+                <p>Le CPU a choisi : </p>
+                <img src="{% static 'images/ciseau.png' %}">
+            {%endif%}
+    </div>
+    {%if res == 'Vous avez gagné'%}
+        <h3 class="win">{{res}}</h3>
+    {% elif res == 'Vous avez perdu'%}
+        <h3 class="lose">{{res}}</h3>
+    {%else%}
+        <h3>{{res}}</h3>
+    {%endif%}
+        <h3>Score:</h3>
+        <div class="my_table">
+            <table>
+                <tr>
+                    <th>Match</th>
+                    {% for round in list_nb_game %}
+                    <th>{{ round }}</th>
+                    {% endfor %}
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>{{prenom}}</td>
+                    {% for me_score in list_my_score %}
+                        <td>{{ me_score }}</td>
+                    {% endfor %}
+                    <td>{{my_score}} victoire(s) {{null_score}} nul(s)</td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    {% for score in list_cp_score %}
+                        <td>{{ score }}</td>
+                    {% endfor %}
+                    <td>{{cp_score}} victoire(s) {{null_score}} nul(s)</td>
+                </tr>
+            </table>
+        </div>
+        {% if nb_game >= 10 %}
+            {% if my_score > cp_score %}
+                <h2>Vainqueur: {{prenom}}</h2>
+            {% elif cp_score > my_score %}
+                <h2>Vainqueur: CPU</h2>
+            {%else%}
+                <h2>Vainqueur: Personne</h2>
+            {%endif%}
+        {%endif%}
+        <div class="init">
+            <a href="{% url 'reset-scores' %}?prenom={{prenom}}">  Réinitialiser les scores </a>
+        </div>
+{% endblock %}
