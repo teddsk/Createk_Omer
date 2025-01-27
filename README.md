@@ -1,6 +1,6 @@
 # Createk - README
 
-Bienvenue dans le dépôt GitHub **Createk_Omer** ! Ce projet contient deux applications interactives et ludiques : une **calculatrice web** et un jeu appelé **Chi Fou Mi** (pierre-papier-ciseaux). Voici un guide détaillé pour que tu puisses explorer, comprendre et tester chaque projet, même si tu es nouveau en informatique.
+Bienvenue dans le dépôt GitHub **Createk** ! Ce projet contient deux applications interactives et ludiques : une **calculatrice web** et un jeu appelé **Chi Fou Mi** (pierre-papier-ciseaux). Voici un guide détaillé pour que tu puisses explorer, comprendre et tester chaque projet, même si tu es nouveau en informatique.
 
 ---
 
